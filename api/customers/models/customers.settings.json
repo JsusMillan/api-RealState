@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Customers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "user": {
+      "via": "customers",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Phone": {
+      "type": "integer"
+    },
+    "Movil": {
+      "type": "integer"
+    },
+    "Sex": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "DateBirth": {
+      "type": "date",
+      "required": false
+    },
+    "IDcardNumber": {
+      "type": "integer"
+    },
+    "IDcardLastNumber": {
+      "type": "integer",
+      "max": 9,
+      "min": 0
+    },
+    "TypePeople": {
+      "type": "enumeration",
+      "enum": [
+        "Natural",
+        "Legal"
+      ]
+    },
+    "SalesFunnel": {
+      "type": "enumeration",
+      "enum": [
+        "Catchment",
+        "Lead",
+        "Conversion",
+        "Repetitive"
+      ]
+    },
+    "properties": {
+      "via": "customer",
+      "collection": "property"
+    }
+  }
+}

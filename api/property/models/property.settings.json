@@ -1,0 +1,128 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "name": "Property"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "customer": {
+      "model": "customers",
+      "via": "properties"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "User": {
+      "via": "Properties",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "OfferPrice": {
+      "type": "integer"
+    },
+    "ConstructionArea": {
+      "type": "decimal"
+    },
+    "LandArea": {
+      "type": "decimal"
+    },
+    "LandAreaSuffix": {
+      "type": "string"
+    },
+    "ConstructionAreaSuffix": {
+      "type": "string"
+    },
+    "Bedrooms": {
+      "type": "integer"
+    },
+    "Bathrooms": {
+      "type": "integer"
+    },
+    "Garages": {
+      "type": "integer"
+    },
+    "YearOfConstruction": {
+      "type": "integer"
+    },
+    "PropertyAddress": {
+      "type": "string"
+    },
+    "ShowMap": {
+      "type": "boolean"
+    },
+    "Latitude": {
+      "type": "float"
+    },
+    "Longitude": {
+      "type": "float"
+    },
+    "GalleryImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "VirtualTour360": {
+      "type": "richtext"
+    },
+    "PrivateNote": {
+      "type": "string"
+    },
+    "ShowInList": {
+      "type": "boolean"
+    },
+    "ShowAlliedZone": {
+      "type": "boolean"
+    },
+    "ShowWebsite": {
+      "type": "boolean"
+    },
+    "FeaturedWebsite": {
+      "type": "boolean"
+    },
+    "EnergyCertificate": {
+      "type": "enumeration",
+      "enum": [
+        "NINGUNO",
+        "AA",
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G"
+      ]
+    },
+    "EnergyEfficiency": {
+      "type": "string"
+    },
+    "EPCClassificationPotential": {
+      "type": "integer"
+    },
+    "EPCPresentValue": {
+      "type": "integer"
+    }
+  }
+}

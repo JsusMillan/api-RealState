@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/catchments",
+      "handler": "catchment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catchments/count",
+      "handler": "catchment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catchments/:id",
+      "handler": "catchment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/catchments",
+      "handler": "catchment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/catchments/:id",
+      "handler": "catchment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/catchments/:id",
+      "handler": "catchment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
